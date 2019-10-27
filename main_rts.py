@@ -1,7 +1,12 @@
 import os,sys
 # make sure the video driver is correct. "dummy" is headless, so do not use it.
-os.environ['SDL_VIDEODRIVER'] = "x11"
-os.putenv("DISPLAY", ":0")
+# os.environ['SDL_VIDEODRIVER'] = "x11"
+# os.putenv("DISPLAY", ":0")
+#
+#
+# # os.environ['SDL_AUDIODRIVER'] =  "pulseaudio"
+# os.putenv("PULSE_SERVER", "tcp:localhost")
+
 import pygame
 from pygame.locals import *
 from button import Button
@@ -17,6 +22,7 @@ cur_dir = os.path.dirname(os.path.realpath(__file__))
 print(cur_dir)
 
 pygame.init()
+
 pygame.mixer.init()
 pygame.mixer.music.load(cur_dir + '/assets/sounds/06 motorized.mp3')
 screen = pygame.display.set_mode((display_width,display_height))
