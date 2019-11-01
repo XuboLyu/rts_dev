@@ -26,8 +26,7 @@ class Button(object):
     def isClicked(self):
         mouse_pos = pygame.mouse.get_pos()
         if self.shape == 'rect':
-            if self.params[0] < mouse_pos[0] < self.params[0] + self.params[2] and \
-                self.params[1] < mouse_pos[1] < self.params[1] + self.params[3]:
+            if self.params[0] < mouse_pos[0] < self.params[0] + self.params[2] and self.params[1] < mouse_pos[1] < self.params[1] + self.params[3]:
                 return True
             else:
                 return False
