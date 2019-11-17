@@ -10,6 +10,7 @@ class Grid(object):
         self.ys = np.zeros(size)
         self.connections = {}
 
+
 class Map(object):
     def __init__(self, width, height, screen):
         self.width = width
