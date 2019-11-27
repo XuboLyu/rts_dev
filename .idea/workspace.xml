@@ -88,6 +88,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="rts_dev" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_map_scrolling" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_map_scrolling/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main_rts" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="rts_dev" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +157,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.isometric_test" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.map_generator" />
       </list>
     </recent_temporary>
@@ -166,7 +189,9 @@
       <workItem from="1573534305088" duration="837000" />
       <workItem from="1573928702450" duration="7253000" />
       <workItem from="1573964268344" duration="6221000" />
-      <workItem from="1574573876094" duration="4298000" />
+      <workItem from="1574573876094" duration="4994000" />
+      <workItem from="1574648752427" duration="5494000" />
+      <workItem from="1574832261134" duration="7917000" />
     </task>
     <servers />
   </component>
@@ -189,6 +214,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rts_dev$main_rts.coverage" NAME="main_rts Coverage Results" MODIFIED="1572586399517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rts_dev$map_generator.coverage" NAME="map_generator Coverage Results" MODIFIED="1572646448063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rts_dev$isometric_test.coverage" NAME="isometric_test Coverage Results" MODIFIED="1574578687995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rts_dev$main.coverage" NAME="main Coverage Results" MODIFIED="1574833076782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_map_scrolling" />
+    <SUITE FILE_PATH="coverage/rts_dev$isometric_test.coverage" NAME="isometric_test Coverage Results" MODIFIED="1574841477809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

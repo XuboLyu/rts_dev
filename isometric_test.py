@@ -16,8 +16,8 @@ def world_to_screen(x, y, origin, tile_size):
     return screen_x, screen_y
 
 
-
 if __name__ == "__main__":
+
     # pass
     RED = (255, 0, 0)
     GREEN = (0,255,0)
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     tile_size = (40, 20)   # length and width of single iso tile
 
     # origin = (5, 1)  # relative original position on screen in tile size
-    origin = (15,1)
+    origin = [15, -20]
     pworld = np.zeros(world_size)
 
     screen_width = 1280
@@ -42,14 +42,35 @@ if __name__ == "__main__":
 
     sprite = pygame.image.load("./assets/images/isometric_demo.png")
 
+    if os.path.exists("./assets/maps/map.txt"):
+        pworld = np.loadtxt("./assets/maps/map.txt")
+
+    # pygame.mouse.set_visible(False)
+    # pygame.event.set_grab(True)
+    mouse_pos = None
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    np.savetxt("./assets/maps/map.txt", pworld, fmt='%d')
+                    pygame.quit()
+                    quit()
+                if event.key == pygame.K_h:
+                    origin = [5,1]
+            if event.type == pygame.MOUSEMOTION:
+                mouse_pos = pygame.mouse.get_pos()
+                # print("mouse pos:", mouse_pos)
+                if abs(mouse_pos[1]-0) < 5:
+                    origin[1] += 1
+                if abs(mouse_pos[1]-screen_height) < 5:
+                    origin[1] -= 1
+                if abs(mouse_pos[0]-0) < 5:
+                    origin[0] += 1
+                if abs(mouse_pos[0]-screen_width) < 5:
+                    origin[0] -= 1
 
             screen.fill([255, 255, 255])
-            mouse_pos = pygame.mouse.get_pos()
+            # pygame.draw.circle(screen, pygame.Color("blue"), mouse_pos, 5)
 
             # cell is regular rectagle
             cell_idx = (mouse_pos[0] // tile_size[0], mouse_pos[1] // tile_size[1])
@@ -78,7 +99,7 @@ if __name__ == "__main__":
                 if selected_idx[0] >= 0 and selected_idx[0] < world_size[0] and selected_idx[1] >= 0 and selected_idx[1] < world_size[1]:
                     pworld[selected_idx] += 1
                     pworld[selected_idx] %= 6
-            print("selected idx:", selected_idx)
+            # print("selected idx:", selected_idx)
 
             for y in range(world_size[1]):
                 for x in range(world_size[0]):
